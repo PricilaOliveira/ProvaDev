@@ -18,7 +18,6 @@ function novoCarro() {
 let inputFile = document.getElementById('fileForm');
 let fileNameField = document.getElementById('fileName');
 
-
 inputFile.addEventListener('change', function(event){
     let uploadedFile = event.target.files[0].name;
     fileNameField.textContent = uploadedFile;
