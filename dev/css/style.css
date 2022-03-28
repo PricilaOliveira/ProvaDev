@@ -1,0 +1,196 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-family: roboto;
+}
+
+header {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-container {
+    align-items: center;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    margin: 0;
+    padding: 0px 80px;
+}
+
+.header-container-logo {
+    width: 55px;
+    height: 55px;
+}
+
+
+input {
+    border-radius: 10px;
+    width: 100%;
+    height: 70px;
+    padding-right: 80px;
+}
+
+.input-container {
+    margin-top: 73px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.lupa-input {
+    position: absolute;
+    right: 100px;
+    top: 15px;
+
+}
+
+input::placeholder {
+    font-family: roboto;
+    font-size: 20px;
+    color: #9A9A9A;
+    width: 500px;
+    padding-left: 10px;
+    padding-right: 20px;
+    
+}
+
+.counterline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 80px;
+    padding-bottom: 20px;
+}
+
+.novoCarro {
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+    height: 40px;
+    width: 70px;
+    border-radius: 5px;
+    background:linear-gradient(200deg, #FC6500, #C4C4C4) ;
+    text-decoration: none;
+    
+}
+.container-jaguar {
+    width: 210px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #E6E6E6;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container-jaguar:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-jaguar-img {
+    width: 100%;
+    height: 150px;
+}
+
+.container-jaguar-name {
+    margin-top: 0px;
+    font-size: 25px;
+}
+
+.container-jaguar-valor {
+    font-size: 25px;
+    text-align: right;
+    margin-top: 25px;
+
+}
+
+.modal-bg {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+#modal-container {
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    width: 40%;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 100;
+    padding: 15px;
+    transform: translateY(-120%);
+    transition: all 0.3s;
+}
+
+.modal-text {
+    display: flex;
+    justify-content: space-between;  
+    width: 100%;
+}
+
+.modal-button {
+    height: 30px;
+    width: 450px;
+    margin: 10px auto;
+    color: white;
+    font-size: 90 auto;
+    background-color: #FC6500;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+#modal-container img {
+    width: 100% ;    
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.closebutton {
+    color: white;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #C4C4C4;
+    cursor: pointer;
+}
+
+@media (max-width:700px) {
+    #modal-container {
+        width: 90%;
+    }
+
+    .cards-container {
+        justify-items: center;
+        align-items: center;
+    }
+}
