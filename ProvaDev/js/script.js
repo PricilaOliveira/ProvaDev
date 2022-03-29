@@ -105,5 +105,4 @@ function closemodal() {
 
     let scrollblock = document.querySelector('body')
     scrollblock.style.cssText='overflow: auto' // desbloqueia o scroll ao ativar modal
-
 }

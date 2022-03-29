@@ -17,39 +17,21 @@
             <h1>Vendarro LTDA</h1>
         </div>
     </header>
-
-    <section class="tableSection">
-        <main>
-
-        <div class="filtroCarro">
-            <h2>Listagem dos Carros</h2>
-        <div>
-            <label for="tableFilter">Filtrar:</label>
-            <input type="text" name="filter" id="tableFilter" placeholder="Digite o modelo do carro ...">
-        </div>
-        </div>
-            
-            <table class="carTable">
-                <thead>
-                    <tr>
-                        <th>Modelo</th>
-                        <th>Valor</th>
-                        <th>Descrição</th>
-                        <th>deletar</th>
-                        <th>editar</th>
-                    </tr>
-                    <tbody id="tableCar">
-                        <tr class="carros">
-                            <td class="info-modelo">Evoque</td>
-                            <td class="info-valor">20000</td>
-                            <td class="info-descr">Apenas uma descrição legal da Evoque boladona</td>
-                            <td><button id="deleteButton"><img src="img/deleteicon.png"></button></td>
-                            <td><button id="editButton"><img src="img/editicon.png"></button></td>
-                        </tr>
-                    </tbody>
-                </thead>
-            </table>
-        </main>
-    </section>
+        <table class="carTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Modelo</th>
+                    <th>Valor</th>
+                    <th>Descrição</th>
+                    <th>deletar</th>
+                    <th>editar</th>
+                </tr>
+                <tbody id="tableCar">
+                    <!-- inserido com função JS -->
+                </tbody>
+            </thead>
+        </table>
 </body>
+<script src="js/list.js"></script>
 </html>

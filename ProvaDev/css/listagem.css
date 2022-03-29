@@ -13,49 +13,55 @@ header {
 }
 
 .header-container {
+    width: 100%;
+    position: relative;
     align-items: center;
     height: 80px;
     display: flex;
     justify-content: space-between;
+    padding: 80px;
 }
 
 .container {
-    margin: 0;
     padding: 0px 60px;
 }
 
-.filtroCarro {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 60px;
+.header-container-logo {
+    margin-right: 80%;
+    width: 55px;
+    height: 55px;
 }
+
 .carTable {
+    padding: 0;
     width: 100%;
     height: 100%;
 }
-.filtroCarro input {
-    height: 100%;
-    border: 1px solid #E6E6E6;
-    border-radius: 5px;
-    padding-left: 10px;
-    font-size: 15px;
-}
-.tableCar button{
+
+#editButton, #deleteButton {
+    height: 50px;
+    width: 50px;
+    border-width: 0;
+    background: none;
+    cursor: pointer;
     border: none;
+}
+#deleteIcon,#atIcon{
+    height:26px;
+    width: 26px;
 }
 td, th {
 	padding: .4em;
 	margin: 0;
 	border: 1px solid #ccc;
 	text-align: center;
-    border-radius: 3px;
 }
 
 th{
 	font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #fff;
+    color: white;
 	background-color:#fc6500b6;
     border-radius: 3px;
 }

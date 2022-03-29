@@ -22,3 +22,5 @@ inputFile.addEventListener('change', function(event){
     let uploadedFile = event.target.files[0].name;
     fileNameField.textContent = uploadedFile;
 })
+
+const cars = document.querySelector('.tableCar')
