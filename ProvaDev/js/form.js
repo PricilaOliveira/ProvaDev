@@ -24,7 +24,6 @@ inputFile.addEventListener('change', function(event){
 
 const cars = document.querySelector('.tableCar')
 
-
 function validar() {
     let modelo = document.getElementById('nomeId');
     let valor = document.getElementById('valorId');
@@ -48,3 +47,4 @@ function validar() {
         novoCarro()
      }
 }
+

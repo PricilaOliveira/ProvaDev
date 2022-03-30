@@ -17,8 +17,7 @@
             <h1>Vendarro LTDA</h1>
         </div>
         <div class="lupaContainer">
-            <input type="text" id="cardList" placeholder=" Digite o modelo do carro...">
-            <img class ="lupaImg"src="img/lupa.png">
+            <input type="text" id="cardList" placeholder=" Pesquise um carro">
         </div>
     </header>
         <table class="carTable">
@@ -36,7 +35,42 @@
                 </tbody>
             </thead>
         </table>
-
+        <div class="modal-bg" onclick="closemodal()"></div>
+        <div id="modal-container">
+            <span class="closebutton" id="spanbutton" onclick="closemodal()">X</span>
+            <p class="title">Atualize seu carro</p>
+            <form  id="myForm">
+                <div class="carDetails">
+                    <div class="inputBox">
+                        <span class="details">Nome</span>
+                        <p id="validar-nome"></p>
+                        <input type="text" name="modelo-carro" id="nomeId" placeholder="Digite o nome do carro aqui">
+                    </div>
+                    <div class="inputBox">
+                        <span class="details">Valor do carro</span>
+                        <p class="validar-valor"></p>
+                       <input type="number" name="valor-carro"id="valorId" placeholder="Digite o nome do carro aqui">
+                    </div>
+                    <div class="inputBox">
+                        <span class="details">Descrição</span>
+                        <p class="validar-descrição"></p>
+                        <textarea name="description-carro" id="descricaoId"></textarea>
+                    </div>
+                    <div class="inputImg">
+                        <label for="fileForm" id="labelImg">Envie um arquivo</label>
+                        <input type="file" accept="image/jpg, image/jpeg, image/png" id="fileForm" name="file-carro">
+                        <span class="fileSpan">
+                            <p class="validar-imagem"></p>
+                            <strong>Arquivo: </strong>
+                            <span id="fileName">Nenhum arquivo</span>
+                        </span>
+                    </div>
+                    <div class="SubmitForm">
+                        <button id="buttonFormId" type="button" onclick="validar()">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 </body>
 <script src="js/list.js"></script>
 </html>
