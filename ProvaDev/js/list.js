@@ -57,7 +57,6 @@ function deleteCar(carId) {
     .then( data => console.log(data))
 }
 
-
 listarCarros()
 
 let input = document.querySelector('#cardList')

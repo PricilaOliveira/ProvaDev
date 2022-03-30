@@ -5,14 +5,13 @@ function novoCarro() {
         fetch ("https://imdev.azurewebsites.net/vendarro/create-carro.php", {
             method: 'POST',
             body: formData})
-
-        .then(response => {
-            if(!response.ok) {
-            throw Error('Preencha todos os corretamente!')
-            }
-            return alert('Carro enviado com sucesso!')
-        })
-        .catch(error => alert(error))
+            .then(response => {
+                if(!response.ok) {
+                throw Error('Favor preencha todos os campos!')
+                }
+                return alert('Carro enviado com sucesso!')
+            })
+            .catch(error => alert(error))
 }
 
 let inputFile = document.getElementById('fileForm');
@@ -24,3 +23,28 @@ inputFile.addEventListener('change', function(event){
 })
 
 const cars = document.querySelector('.tableCar')
+
+
+function validar() {
+    let modelo = document.getElementById('nomeId');
+    let valor = document.getElementById('valorId');
+    let descr = document.getElementById('descricaoId');
+    let image = document.getElementById('fileForm');
+    let imgvalue = image.files;
+
+    if (modelo.value == '') {
+     alert ('Preencha o modelo do carro!');
+    }
+     if (valor.value == '') {
+        alert ('Preencha o valor!');
+    }
+     if (descr.value == '') {
+       alert ('Escreva uma breve descrição para o carro!');
+    }
+    if (imgvalue.length == 0) {
+        alert ('Insira uma imagem!')
+    }
+    else {
+        novoCarro()
+     }
+}
