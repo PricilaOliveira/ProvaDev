@@ -8,6 +8,9 @@ const cars = document.querySelector('.tableCar')
 let deleteYes = document.querySelector('#ButtonYes')
 deleteYes.onclick = deleteCar
 
+function CreateCar () {
+    
+}
 function buscarApi(){
     fetch(apiUrl+'/get-carros.php')
     .then(response => response.json())

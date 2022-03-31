@@ -44,4 +44,3 @@ function validar() {
         novoCarro()
      }
 }
-
