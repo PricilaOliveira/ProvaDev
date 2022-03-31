@@ -98,7 +98,7 @@ function exibeModal(idcar) {
 
 function closemodal() {
     let close = document.querySelector('#modal-container')
-    close.style.cssText= 'transform: translateY(-150%)'
+    close.style.cssText= 'transform: translateY(-250%)'
 
     let closemodalbg = document.querySelector('.modal-bg')
     closemodalbg.style.display='none'
