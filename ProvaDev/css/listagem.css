@@ -80,7 +80,6 @@ tr:hover {
     padding-bottom: 10px;
 }
 
-
 input {
     border-radius: 5px;
     width: 80%;
@@ -97,6 +96,7 @@ input {
     background-color: rgba(0,0,0,0.4);
     cursor: pointer;
 }
+
 .modalDeleteBg {
     display: none;
     position: fixed;
@@ -108,6 +108,7 @@ input {
     background-color: rgba(0,0,0,0.4);
     cursor: pointer;
 }
+
 #modal-container {
     position: fixed;
     top: 0;
@@ -141,6 +142,7 @@ input {
     transform: translateY(-600%);
     transition: all 0.3s;
 }
+
 #modalDeleteContainer button {
     margin: 15px;
     height: 25px;
@@ -154,6 +156,7 @@ input {
     transition-duration: 0.4s;
 
 }
+
 #ButtonYes {
     background-color: rgba(255, 5, 5, 0.623);
 }
@@ -250,12 +253,12 @@ textarea {
     align-items: center;
 }
 
-form .SubmitForm {
+form .editButton {
     height: 40px;
     margin: 10px 0;
 }
 
-form .SubmitForm button {
+form #buttonFormId {
     height: 100%;
     width: 100%;
     border: 0;
@@ -268,8 +271,21 @@ form .SubmitForm button {
     cursor: pointer;
     transition-duration: 0.4s;
 }
+#modalNewCarRegister {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 18px;
+    /* espaço entre as letras */
+    text-transform: uppercase;
+    background: #fd7820d3;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
 
-form .SubmitForm button:hover {
+form .editButton button:hover {
     background:#FC6500;
     color: #ffffff;
     letter-spacing: 2px;
@@ -356,11 +372,4 @@ input::placeholder {
     z-index: 100;
     transform: translateY(-600%);
     transition-duration: 0.5s;
-}
-
-@media (max-width:600) {
-    
-    .header-container {
-
-    }
 }

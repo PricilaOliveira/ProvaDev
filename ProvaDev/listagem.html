@@ -59,7 +59,7 @@
                     </div>
                     <div class="inputImg">
                         <label for="fileForm" id="labelImg">Envie um arquivo</label>
-                        <input type="file" accept="image/jpg, image/jpeg, image/png" id="fileForm" name="file-carro">
+                        <input type="file" accept="image/jpg, image/jpeg, image/png" id="fileForm" name="edit-file-carro">
                         <span class="fileSpan">
                             <p class="validar-imagem"></p>
                             <strong>Arquivo: </strong>
@@ -82,34 +82,34 @@
     <div id="modalNewCarContainer">
         <div class="containerForm">
             <div class="title">Cadastre seu carro</div>
-            <form  id="myForm">
+            <form  id="newCarForm">
                 <div class="carDetails">
                     <div class="inputBox">
                         <span class="details">Nome</span>
                         <p id="validar-nome"></p>
-                        <input type="text" name="modelo-carro" id="nomeId" placeholder="Digite o nome do carro aqui">
+                        <input type="text" name="modelo-carro" id="newCarModalName" placeholder="Digite o nome do carro aqui">
                     </div>
                     <div class="inputBox">
                         <span class="details">Valor do carro</span>
                         <p class="validar-valor"></p>
-                       <input type="number" name="valor-carro"id="valorId" placeholder="Digite o nome do carro aqui">
+                       <input type="number" name="valor-carro"id="newCarModalValor" placeholder="Digite o nome do carro aqui">
                     </div>
                     <div class="inputBox">
                         <span class="details">Descrição</span>
                         <p class="validar-descrição"></p>
-                        <textarea name="description-carro" id="descricaoId" placeholder="Digite uma breve descrição do produto"></textarea>
+                        <textarea name="description-carro" id="newCarModalDesc" placeholder="Digite uma breve descrição do produto"></textarea>
                     </div>
                     <div class="inputImg">
-                        <label for="fileForm" id="labelImg">Envie um arquivo</label>
-                        <input type="file" accept="image/jpg, image/jpeg, image/png" id="fileFormNewCar" name="file-carro">
+                        <label for="newCarModalImg" id="labelImg">Envie um arquivo</label>
+                        <input type="file" accept="image/jpg, image/jpeg, image/png" id="newCarModalImg" name="file-carro">
                         <span class="fileSpan">
                             <p class="validar-imagem"></p>
                             <strong>Arquivo: </strong>
-                            <span id="fileNameNewCar">Nenhum arquivo</span>
+                            <span id="newCarModalImgValue">Nenhum arquivo</span>
                         </span>
                     </div>
                     <div class="SubmitForm">
-                        <button id="buttonFormId" type="button" onclick="validarNovoCarro()">Registrar</button>
+                        <button id="modalNewCarRegister"  type="button" onclick="NewCarValidate()">Registrar</button>
                     </div>
                 </div>
             </form>

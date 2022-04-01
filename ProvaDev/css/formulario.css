@@ -13,7 +13,43 @@ body {
     background: linear-gradient(200deg, #FC6500, white);
 }
 
+.AtualizarCarro {
+    height: 40px;
+    margin: 10px 0;
+}
 
+#modalNewCarRegister {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 8px;
+    /* espaço entre as letras */
+    text-transform: uppercase;
+    background: #fd7820d3;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+ #buttonFormId {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 8px;
+    /* espaço entre as letras */
+    text-transform: uppercase;
+    background: #fd7820d3;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+#buttonFormId button:hover {
+    background:#FC6500;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
 
 .containerForm {
     max-width: 700px;

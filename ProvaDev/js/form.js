@@ -1,6 +1,6 @@
 function novoCarro() {
-    let myForm = document.getElementById('myForm');
-    let formData = new FormData(myForm);
+    let newCarForm = document.getElementById('modalNewCarContainer');
+    let formData = new FormData(newCarForm);
     
         fetch ("https://imdev.azurewebsites.net/vendarro/create-carro.php", {
             method: 'POST',
@@ -9,7 +9,6 @@ function novoCarro() {
                 if(!response.ok) {
                 throw Error('Favor preencha todos os campos!')
                 }
-                return alert('Carro enviado com sucesso!')
             })
             .catch(error => alert(error))
 }
@@ -40,7 +39,5 @@ function validar() {
     if (imgvalue.length == 0) {
         alert ('Insira uma imagem!')
     }
-    else {
-        novoCarro()
-     }
+
 }

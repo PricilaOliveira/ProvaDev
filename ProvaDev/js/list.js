@@ -1,16 +1,72 @@
 let carList = []
 let apiUrl = 'https://imdev.azurewebsites.net/vendarro'
 let deleteId
-let inputFile = document.getElementById('fileForm');
-let fileNameField = document.getElementById('fileName');
 const cars = document.querySelector('.tableCar')
 
 let deleteYes = document.querySelector('#ButtonYes')
 deleteYes.onclick = deleteCar
 
-function CreateCar () {
+function newCarfunc() {
+    let newCar = document.getElementById('newCarForm');
+    let newFormData = new FormData(newCar)
     
+        fetch ("https://imdev.azurewebsites.net/vendarro/create-carro.php", {
+            method: 'POST',
+            body: newFormData})
+            .then(response => {
+                if(!response.ok) {
+                throw Error('Favor preencha todos os campos!')
+                }
+                return alert('Carro enviado com sucesso!')
+            })
+            .catch(error => alert(error))
 }
+
+// altera o nome da imagem no input do novo carro
+let newCarInputImg = document.getElementById('newCarModalImg')
+let newCarInputValue = document.getElementById('newCarModalImgValue')
+
+newCarInputImg.addEventListener('change', function(event) {
+    let uploadedNewCarImg = event.target.files[0].name
+    newCarInputValue.textContent = uploadedNewCarImg
+})
+
+// altera nome da imagem no input do atualizar carro
+let inputFile = document.getElementById('fileForm')
+let fileNameField = document.getElementById('fileName')
+
+inputFile.addEventListener('change', function(event){
+    let uploadedFile = event.target.files[0].name;
+    fileNameField.textContent = uploadedFile;
+})
+
+function NewCarValidate() {
+    let newCarModalName = document.getElementById('newCarModalName')
+    let newCarModalValor = document.getElementById('newCarModalValor')
+    let newCarModalDesc = document.getElementById('newCarModalDesc')
+    let newCarModalImagem = document.getElementById('newCarModalImg')
+    let filesModalNewCar = newCarModalImagem.files;
+
+    if (newCarModalName.value == '') {
+        alert ('Preencha o modelo do carro!');
+       }
+        if (newCarModalValor.value == '') {
+           alert ('Preencha o valor!');
+       }
+        if (newCarModalDesc.value == '') {
+          alert ('Escreva uma breve descrição para o carro!');
+       }
+       if (filesModalNewCar.length == 0) {
+           alert ('Insira uma imagem!')
+       }
+       else {
+            alert ('Carro enviado com sucesso!')
+            buscarApi()
+        }
+        newCarfunc()
+        closeModalNewCar()
+}
+
 function buscarApi(){
     fetch(apiUrl+'/get-carros.php')
     .then(response => response.json())
@@ -86,11 +142,6 @@ let input = document.querySelector('#cardList')
     input.onkeyup=filterCars
 
 
-inputFile.addEventListener('change', function(event){
-    let uploadedFile = event.target.files[0].name;
-    fileNameField.textContent = uploadedFile;
-})
-
 function filterCars() {
         let search = input.value.toLowerCase()
     
@@ -101,8 +152,6 @@ function filterCars() {
         else {
             showCars(carsFiltered)
         }
-        console.log(search)
-    
 }
 
 function showCars(carsFiltered) {
