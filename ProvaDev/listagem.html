@@ -10,18 +10,19 @@
     <link rel="stylesheet" href="css/listagem.css">
     <title>Lista de carros</title>
 </head>
+<header id="idsombra">
+    <div class="BoxContainer">
+    <div class="header-container container">
+        <img class="header-container-logo"src="img/logo.png" alt="logo">    
+        <h1>Vendarro LTDA</h1>
+    </div>
+    <div class="lupaContainer">
+        <input type="text" id="cardList" placeholder=" Pesquise um carro">
+        <button class="buttonAdd">Novo carro</button>
+    </div>
+</header>
 <body>
-    <header id="idsombra">
-        <div class="header-container container">
-            <img class="header-container-logo"src="img/logo.png" alt="logo">    
-            <h1>Vendarro LTDA</h1>
-        </div>
-        <div class="lupaContainer">
-            <input type="text" id="cardList" placeholder=" Pesquise um carro">
-            <button class="buttonAdd" onclick="exibeModalNewCar()"> Novo carro</button>
-        </div>
-    </header>
-        <table class="carTable">
+        <table class="carTable container">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -36,9 +37,9 @@
                 </tbody>
             </thead>
         </table>
-        <div class="modal-bg" onclick="closemodal()"></div>
+        <div class="modal-bg"></div>
         <div id="modal-container">
-            <span class="closebutton" id="spanbutton" onclick="closemodal()">X</span>
+            <span class="closebutton" id="spanbutton">X</span>
             <p class="title">Atualize seu carro</p>
             <form  id="myForm">
                 <div class="carDetails">
@@ -67,18 +68,18 @@
                         </span>
                     </div>
                     <div class="SubmitForm">
-                        <button id="buttonFormId" type="button" onclick="validar()">Registrar</button>
+                        <button id="buttonFormId" type="button">Registrar</button>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="modalDeleteBg" onclick="closemodalDelete()"></div>
+        <div class="modalDeleteBg"></div>
         <div id="modalDeleteContainer">
                 <a>Deseja mesmo excluir ?</a>
                 <button id="ButtonYes">Sim</button>
-                <button id="ButtonNo" onclick="closemodalDelete()">Não</button>
+                <button id="ButtonNo">Não</button>
         </div>
-    <div id="modalNewCarBg" onclick="closeModalNewCar()"></div>
+    <div id="modalNewCarBg"></div>
     <div id="modalNewCarContainer">
         <div class="containerForm">
             <div class="title">Cadastre seu carro</div>
@@ -109,12 +110,12 @@
                         </span>
                     </div>
                     <div class="SubmitForm">
-                        <button id="modalNewCarRegister"  type="button" onclick="NewCarValidate()">Registrar</button>
+                        <button id="modalNewCarRegister"  type="button">Registrar</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-</body>
 <script src="js/list.js"></script>
+</body>
 </html>

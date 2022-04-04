@@ -119,6 +119,25 @@ function listarCarros() {
             exibeModal(carId)
         }
     })
+
+
+    let validarNovoCarro = document.querySelector('#modalNewCarRegister')
+        validarNovoCarro.onclick = (NewCarValidate)
+
+    let fechaModalDeletarNao = document.querySelector('#ButtonNo')
+        fechaModalDeletarNao.onclick = (closemodalDelete)
+
+    let openModalNewCar = document.querySelector('.buttonAdd')
+        openModalNewCar.onclick = (exibeModalNewCar)
+
+    let fechaModalNewCar = document.querySelector('#modalNewCarBg')
+        fechaModalNewCar.onclick = (closeModalNewCar)
+
+    let fechaModalBg = document.querySelector('.modal-bg')
+        fechaModalBg.onclick = (closemodal)
+
+    let fechamodalDeleteBg = document.querySelector('.modalDeleteBg')
+        fechamodalDeleteBg.onclick = (closemodalDelete)
 }
 
 function deleteCar() {
@@ -140,7 +159,6 @@ function deleteCar() {
 
 let input = document.querySelector('#cardList')
     input.onkeyup=filterCars
-
 
 function filterCars() {
         let search = input.value.toLowerCase()
@@ -203,7 +221,6 @@ let scrollblock = document.querySelector('body')
     let editCar = document.querySelectorAll('#buttonFormId')
     editCar.forEach(button => {
         button.onclick = function() {
-            // let carsFind = carList.find (car => car.id == carId)
             let myForm = document.getElementById('myForm')
             let formData = new FormData(myForm)
             formData.append('id', exibeCar.id)
@@ -271,7 +288,7 @@ function closeModalNewCar() {
     closeModalDeleteBg.style.display='none';
 
     let close = document.querySelector('#modalNewCarContainer')
-    close.style.cssText= 'transform: translateY(-600%)';
+    close.style.cssText= 'transform: translateY(-1000%)';
 
     let scrollblock = document.querySelector('body')
     scrollblock.style.cssText='overflow: auto';

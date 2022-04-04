@@ -2,16 +2,10 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html,body {
     font-family: roboto;
-    /* width: 100%; */
 }
-
 
 .header-container {
-    width: 100%;
     position: relative;
     align-items: center;
     height: 80px;
@@ -21,15 +15,15 @@ html,body {
 
 .container {
     margin: 0 auto;
-    width: 90%;
-    padding-left: 80px;
-    padding-right: 80px;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .carTable {
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% auto;
+    height: 100% auto;
 }
 
 #editButton, #deleteButton {
@@ -45,8 +39,6 @@ html,body {
     width: 26px;
 }
 td, th {
-	padding: .4em;
-	margin: 0;
 	border: 1px solid #ccc;
 	text-align: center;
 }
@@ -54,7 +46,6 @@ td, th {
 th{
 	font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
     color: white;
 	background-color:#fc6500b6;
     border-radius: 3px;
@@ -64,19 +55,10 @@ tr {
     transition: 0.4s;
 }
 
-tr:hover {
-    background-color: #005eff79;
-    letter-spacing: 1px;
-}
-
 .lupaContainer {
-    position: relative;
     display:flex;
-    justify-content: space-between;
-    right: 0;
-    left: 60px;
-    width: 60%;
-    height: 50px;
+    justify-content: center;
+    width: 100%;
     padding-bottom: 10px;
 }
 
@@ -123,7 +105,6 @@ input {
     padding: 15px;
     transform: translateY(-120%);
     transition: all 0.3s;
-    
 }
 
 #modalDeleteContainer {
@@ -139,7 +120,7 @@ input {
     background-color: white;
     border-radius: 6px;
     z-index: 100;
-    transform: translateY(-600%);
+    transform: translateY(-800%);
     transition: all 0.3s;
 }
 
@@ -168,7 +149,6 @@ input {
 #modalDeleteContainer a {
     font-weight: 600;
     font-size: 18px;
-    margin-left: 20px;
 }
 
 .closeBtnModal {
@@ -221,7 +201,6 @@ input {
 .containerForm form .carDetails {
     display: inline;
     justify-content: space-between;
-
 }
 
 form .carDetails .inputBox {
@@ -372,4 +351,10 @@ input::placeholder {
     z-index: 100;
     transform: translateY(-600%);
     transition-duration: 0.5s;
+}
+
+@media (max-width: 600px) {
+    td {
+        font-size: 19px;
+    }
 }
